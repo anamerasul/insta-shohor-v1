@@ -12,20 +12,12 @@ const getReportedPosts = () => {
 };
 
 const isLiked = (id) => {
-  console.log(id)
     return likedPostsId?.length && !!likedPostsId.includes(id);
 };
 
 const addToLiked = (id) => {
-   console.log(likedPostsId)
-  if(likedPostsId.indexOf()===-1){
     likedPostsId.push(id); 
     showPosts(posts);
-  }
-  else{
-   return;
-  }
-   
 };
 
 const reportPost = (id) => {
@@ -149,46 +141,39 @@ const createPost = (post) => {
 };
 
 const showPosts = (posts) => {
-    const productsContainer = document.getElementById( "posts" );
-    productsContainer.innerHTML = "";
+  const productsContainer = document.getElementById( "posts" );
+  productsContainer.innerHTML = "";
 
-    posts.forEach((post) => {
-        const div = createPost(post);
-        productsContainer.appendChild(div);
-    });
+  posts.forEach((post) => {
+      const div = createPost(post);
+      productsContainer.appendChild(div);
+  });
 };
 
 const displayLikedPosts = () => {
-  // fixed display liked 
-  document.getElementById( "liked" ).innerHTML=``;
-  // console.log(post)
-    const likedPosts = getLikedPosts();
-    // console.log(likedPosts )
-    // console.log(likedPosts.indexOf())
-    likedPosts.forEach((post) => {
-    const div = createPost(post);
-    // console.log(div)
-    document.getElementById( "liked" ).appendChild(div);
+  // fixed display liked post
+  document.getElementById( "liked" ).innerHTML='';
+  const likedPosts = getLikedPosts();
+  likedPosts.forEach((post) => {
+      const div = createPost(post);
+      document.getElementById( "liked" ).appendChild(div);
   });
-   
-
 };
 
 const displayReportedPosts = () => {
-
-    const reportedPosts = getReportedPosts();
-    // console.log(reportedPosts)
-    // fixed reported post
-    reportedPosts.forEach((post) => {
-        const div = createPost(post);
-        document.getElementById( "reported" ).appendChild(div);
-    });
+  // fixed displayreport post
+  document.getElementById( "reported" ).innerHTML = "";
+  const reportedPosts = getReportedPosts();
+  reportedPosts.forEach((post) => {
+      const div = createPost(post);
+      document.getElementById( "reported" ).appendChild(div);
+  });
 };
 
 const loadPosts = async () =>{
-  let data = await fetch('../data/posts.json');
-  posts = await data.json();
-  showPosts(posts);
+let data = await fetch('../data/posts.json');
+posts = await data.json();
+showPosts(posts);
 }
 
 loadPosts();
