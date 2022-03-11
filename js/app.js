@@ -80,7 +80,7 @@ const createPost = (post) => {
                   <!-- fixed user image--->
                     <img src="${userImage}" alt="User Picture" />
                   </a>
-                  <a href="#" class="post__user">phero</a>
+                  <a href="#" class="post__user">anam</a>
                 </div>
 
                 <button class="post__more-options">
