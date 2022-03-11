@@ -40,16 +40,20 @@ const switchTab = (id) => {
         document.getElementById( "posts" ).style.display = "grid";
         document.getElementById( "liked" ).style.display = "none";
         document.getElementById( "liked-div" ).style.display = "none";
-
         document.getElementById( "reported" ).style.display = "none";
         document.getElementById( "reported-div" ).style.display = "none";
+        // update question answer div and footer div
+        document.getElementById( "question-answer" ).style.display = "block";
+        document.getElementById( "footer-div" ).style.display = "block";
     } else if (id === "liked") {
         document.getElementById( "liked" ).style.display = "grid";
         document.getElementById( "liked-div" ).style.display = "block";
-
         document.getElementById( "posts" ).style.display = "none";
         document.getElementById( "reported" ).style.display = "none";
         document.getElementById( "reported-div" ).style.display = "none";
+        // update question answer div and footer div
+        document.getElementById( "question-answer" ).style.display = "none";
+        document.getElementById( "footer-div" ).style.display = "none";
 
         displayLikedPosts();
     } else {
@@ -58,6 +62,9 @@ const switchTab = (id) => {
         document.getElementById( "posts" ).style.display = "none";
         document.getElementById( "liked" ).style.display = "none";
         document.getElementById( "liked-div" ).style.display = "none";
+        // update question answer div and footer div
+        document.getElementById( "question-answer" ).style.display = "none";
+        document.getElementById( "footer-div" ).style.display = "none";
 
         displayReportedPosts();
     }
