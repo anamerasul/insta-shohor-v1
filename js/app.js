@@ -12,12 +12,20 @@ const getReportedPosts = () => {
 };
 
 const isLiked = (id) => {
+  console.log(id)
     return likedPostsId?.length && !!likedPostsId.includes(id);
 };
 
 const addToLiked = (id) => {
+   console.log(likedPostsId)
+  if(likedPostsId.indexOf()===-1){
     likedPostsId.push(id); 
     showPosts(posts);
+  }
+  else{
+   return;
+  }
+   
 };
 
 const reportPost = (id) => {
@@ -152,14 +160,14 @@ const showPosts = (posts) => {
 
 const displayLikedPosts = () => {
   // fixed display liked 
-  document.getElementById( "liked" ).innerHTML='';
+  document.getElementById( "liked" ).innerHTML=``;
   // console.log(post)
     const likedPosts = getLikedPosts();
     // console.log(likedPosts )
     // console.log(likedPosts.indexOf())
     likedPosts.forEach((post) => {
     const div = createPost(post);
-    console.log(div)
+    // console.log(div)
     document.getElementById( "liked" ).appendChild(div);
   });
    
