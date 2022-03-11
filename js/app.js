@@ -80,7 +80,7 @@ const createPost = (post) => {
                   <!-- fixed user image--->
                     <img src="${userImage}" alt="User Picture" />
                   </a>
-                  <a href="#" class="post__user">anam</a>
+                  <a href="#" class="post__user">phero</a>
                 </div>
 
                 <button class="post__more-options">
@@ -171,7 +171,7 @@ const displayLikedPosts = () => {
 
 const displayReportedPosts = () => {
   // fixed displayreport post
-  document.getElementById( "reported" ).innerHTML = "";
+  document.getElementById( "reported" ).innerHTML = '';
   const reportedPosts = getReportedPosts();
   reportedPosts.forEach((post) => {
       const div = createPost(post);
