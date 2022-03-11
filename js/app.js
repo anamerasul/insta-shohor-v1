@@ -150,20 +150,19 @@ const showPosts = (posts) => {
     });
 };
 
-const displayLikedPosts = (post) => {
+const displayLikedPosts = () => {
+  // fixed display liked 
+  document.getElementById( "liked" ).innerHTML='';
   // console.log(post)
     const likedPosts = getLikedPosts();
-    console.log(likedPosts )
-    console.log(likedPosts.indexOf())
-    if (likedPosts.indexOf()!==-1){
-      likedPosts.forEach((post) => {
-        const div = createPost(post);
-        document.getElementById( "liked" ).appendChild(div);
-    });
-    }
-    else{
-      console.log('done')
-    }
+    // console.log(likedPosts )
+    // console.log(likedPosts.indexOf())
+    likedPosts.forEach((post) => {
+    const div = createPost(post);
+    console.log(div)
+    document.getElementById( "liked" ).appendChild(div);
+  });
+   
 
 };
 
