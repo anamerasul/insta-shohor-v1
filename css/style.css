@@ -237,12 +237,15 @@ img {
   margin: 10px 0;
   color: gray;
 }
-
+ /* fixed like and reported css */
 #liked{
   display: none;
+  grid-template-columns: repeat(3, 1fr);
+
 }
 #reported{
   display: none;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 @media only screen and (max-width: 992px) {
@@ -250,9 +253,23 @@ img {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  #liked{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #reported{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
 }
 @media only screen and (max-width: 576px) {
   #posts {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #liked{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #reported{
     grid-template-columns: repeat(1, 1fr);
   }
 }
