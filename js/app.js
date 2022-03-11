@@ -18,6 +18,7 @@ const isLiked = (id) => {
 const addToLiked = (id) => {
   // fixed addToLiked after reported
    const remainingPosts = posts.filter((post) => !reportedPostsId.includes(post.id));
+  //  change plus to push
     likedPostsId.push(id); 
     showPosts(remainingPosts);
 };
