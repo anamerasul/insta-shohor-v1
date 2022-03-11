@@ -34,6 +34,7 @@
         <header>
             <nav class="navbar navbar-expand-md navbar-light bg-light px-5">
                 <a class="navbar-brand" href="#">Insta-Sohor</a>
+                <!-- fixed navbar toggler -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -76,6 +77,60 @@
                 </div>
             </div>
         </main>
+        <!-- Question and answer section -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <h2>Question and Answer</h2>
+                    <div class="col-12 col-md-12 text-center my-3">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                How does JavaScript Work?
+                                </button>
+                              </h2>
+                              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                <p>
+                                  <strong>JavaScript is a client-side scripting language and one of the most efficient, commonly used scripting languages. The term .client-side scripting language means that it runs at the client-side( or on the client machine) inside the web-browsers, To run JavaScript chrome browser using v8 engine, Firefox using Spidermonkey, Edge using Chakra and Safari using JavaScript Core. Now a days to run JavaScript on server-side  using Nodejs which is build on based on v8 engine and c++, To run JavaScript file on JavaScript engine and NodeJS every process are same,first JavaScript engine or NodeJS takes  the JavaScript file and converted into the machine code so that the JavaScript run. Then its execute the code line by line which is called Synchronous behavior by default It's does not execute a function or code before the previous process is finished. There is an asynchronous behavior on JavaScript, in this behavior JavaScript runs same as Synchronous but difference is if a function or code take more time to execute the JavaScript engine or NodeJS put the function or code into a queue ,after executing all code or function then executing the code or function which is on the queue</strong>
+
+                                </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                  Accordion Item #2
+                                </button>
+                              </h2>
+                              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                  Accordion Item #3
+                                </button>
+                              </h2>
+                              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
         <footer></footer>
 
         <!-- add bootstrap bundle-js -->
